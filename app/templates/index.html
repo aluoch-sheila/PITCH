@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"> {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> PITCHING </title>
+    {% endif %}
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+</head>
+{% extends 'base.html'%} {% import 'macros.html' as macro%}{% import "bootstrap/wtf.html" as wtf %}
+
+<body>
+    {% block content %}
+
+        <H1>Whats on your mind!!</H1>
+
+        <h3>Choose a category below and pitch or view pitches</h3>
+
+        {% for prodo in index %}
+            <ol>
+                <h3>Category: {{prodo.category}}</h3>
+                <H3>{{prodo.body}}</H3>
+                <p>By:{{prodo.post}}</p>
+                <p>{{prodo.date_posted}}</p>
+                <a href="/comment/4">comment</a>
+
+                <h3>Comments</h3>
+                {% for comment in comm %}
+                {{comment.poster}}
+                By:{{ comment.comment }}
+
+                {% endfor %}
+
+            </ol>
+
+
+
+
+        {% endfor %}
+
+    {% endblock%}
+</body>
+
+</html>
