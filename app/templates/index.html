@@ -15,15 +15,23 @@
 
 <body>
     {% block content %}
+    <div class="container" style = "margin-top:56%">
+        <div class="pitch">
+            <a class="btn btn-primary" style="font-size:large;" href="/pitch/pickup lines"> Pickup lines</a>
+            <a class="btn btn-primary" style="font-size:large;" href="/pitch/interview pitch"> Interview pitch</a>
+            <a class="btn btn-primary" style="font-size:large;" href="/pitch/product pitch"> Product pitch</a>
+            <a class="btn btn-primary" style="font-size:large;" href="/pitch/promotion pitch"> Promotion pitch</a>
+            <!-- <H1>Whats on your mind!!</H1>
 
-        <H1>Whats on your mind!!</H1>
-
-        <h3>Choose a category below and pitch or view pitches</h3>
+    </div>
+    <h3>Choose a category below and pitch or view pitches</h3> -->
+        </div>
 
         {% for prodo in index %}
+        <div class="panel panel-success panel-heading" style="text-align:center;">
             <ol>
                 <h3>Category: {{prodo.category}}</h3>
-                <H3>{{prodo.body}}</H3>
+                <H3 style="font-family: 'Cookie', cursive;">{{prodo.body}}</H3>
                 <p>By:{{prodo.post}}</p>
                 <p>{{prodo.date_posted}}</p>
                 <a href="/comment/4">comment</a>
@@ -38,10 +46,9 @@
             </ol>
 
 
-
-
-        {% endfor %}
-
+            {% endfor %}
+        </div>
+    </div>
     {% endblock%}
 </body>
 

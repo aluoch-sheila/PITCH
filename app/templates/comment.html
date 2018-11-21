@@ -1,0 +1,15 @@
+{%block content%}
+{{ wtf.quick_form(fom) }}
+
+
+{% for comment in comm %}
+
+<p>{{ comment.comment }}</p>
+<p> By: {{comment.poster}}</p>
+
+{% endfor %}
+
+<!-- </div>
+</div> -->
+
+{% endblock %}

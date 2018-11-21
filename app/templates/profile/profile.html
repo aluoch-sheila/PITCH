@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+        <!-- displaying  Username-->
+            <h3> {{user.username| capitalize}} </h3>
+
+            <!--Displaying user bio-->
+            {% if user.bio %}
+            <p> {{user.bio}}</p>
+            {%else%}
+            <p> {{user.username| capitalize}} has no bio </p>
+            {% endif %}
+
+        <!--Display profile photo-->
+
+
+            {% if user.profile_pic_path %}
+            <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
+            {%else%}
+            <p>No profile picture</p>
+            {% endif %}
+     
+{% endblock %}

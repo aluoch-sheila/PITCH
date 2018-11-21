@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!-- content block -->
+{% block content %}
+
+<h2>{{post.post_title}}</h2>
+<p>{{post.post_text}}</p>
+
+<br>
+<hr>
+
+
+<br>
+<br>
+{% for comment in comments %}
+<div class="panel panel-default" class='panel-view'>
+
+    <div class="panel-body">
+        <p>{{comment.comment_text}}</p>
+    </div>
+
+</div>
+{% endfor %}
+{% endblock %}
