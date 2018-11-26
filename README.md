@@ -17,7 +17,7 @@ https://github.com/aluoch-sheila/PITCH.git
 
 # Live Demo
 
-Run this url link:https://github.com/aluoch-sheila/PITCH.git
+Run this url linkhttps://sheila-pitch.herokuapp.com/
 # Contacts
 To find me, use: aluochsheila1999@gmail.com
 
